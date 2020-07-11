@@ -1,10 +1,13 @@
 {
   "name": "weather_app_javascript",
   "version": "1.0.0",
-  "private": "true",
+  "private": true,
   "description": "",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "start": "webpack --config webpack.dev.js",
+    "build": "webpack --config webpack.prod.js"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mariosknl/weather_app_javascript.git"
