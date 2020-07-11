@@ -1,6 +1,7 @@
 /* eslint-disable import/no-extraneous-dependencies */
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
   mode: 'production',
@@ -9,7 +10,10 @@ module.exports = {
     filename: 'main.[contentHash].js',
     path: path.resolve(__dirname, 'dist'),
   },
-  plugins: [new HtmlWebpackPlugin()],
+  plugins: [
+    new HtmlWebpackPlugin(),
+    new CleanWebpackPlugin(),
+  ],
   module: {
     rules: [
       {
@@ -19,6 +23,17 @@ module.exports = {
           'css-loader', // turns css into js
           'sass-loader', // turns scss into css
           'postcss-loader',
+        ],
+      },
+      {
+        test: /\.(png|jpg|gif)$/i,
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              limit: 8192,
+            },
+          },
         ],
       },
     ],
