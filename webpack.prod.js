@@ -2,6 +2,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
   mode: 'production',
@@ -16,13 +17,14 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin(),
     new CleanWebpackPlugin(),
+    new MiniCssExtractPlugin({ filename: '[name].[contentHash].css' }),
   ],
   module: {
     rules: [
       {
         test: /\.s[ac]ss$/i,
         use: [
-          'style-loader', // injects styles into DOM
+          MiniCssExtractPlugin.loader, // Extract Css into files
           'css-loader', // turns css into js
           'sass-loader', // turns scss into css
           'postcss-loader',
