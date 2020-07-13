@@ -1,8 +1,10 @@
 import weatherApi from '../utilities/weatherApi';
 import populateForm from '../utilities/populateDom';
+import farCel from './farCelObj';
 
-const fillFiels = async (city) => {
-  const information = await weatherApi.getWeather(city);
+const fillFields = async (city) => {
+  const metric = farCel.temp.celsius === true ? 'metric' : 'imperial';
+  const information = await weatherApi.getWeather(city, metric);
   populateForm.populateInfo(
     information.name,
     information.main.temp,
@@ -15,4 +17,4 @@ const fillFiels = async (city) => {
   );
 };
 
-export default { fillFiels };
+export default { fillFields };
