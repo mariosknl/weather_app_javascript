@@ -10,7 +10,7 @@ module.exports = {
   mode: 'production',
   entry: {
     main: './src/index.js',
-    vendor: './src/index.js',
+    vendor: './src/vendor.js',
   },
   output: {
     filename: '[name].[contentHash].bundle.js',
