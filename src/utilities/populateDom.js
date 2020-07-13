@@ -1,23 +1,31 @@
 import elements from './elements';
 
 
-const populateInfo = (temp, feelsLike, tempMin, tempMax, humidity, lon, lat) => {
+const populateInfo = (name, temp, feelsLike, tempMin, tempMax, humidity, lon, lat) => {
   const { mainContainer } = elements.el();
 
   const cityDetails = document.createElement('div');
+  cityDetails.classList = 'flex justify-center align-middle';
   cityDetails.innerHTML = `
-  <div class="max-w-sm rounded overflow-hidden shadow-lg">
-  <div class="px-6 py-4">
-    <div class="font-bold text-xl mb-2">The Coldest Sunset</div>
-    <ul class="text-gray-700 text-base">
-      <li>Temperature: ${temp}</li>
-      <li>Feels Like: ${feelsLike}</li>
-      <li>Min: ${tempMin}</li>
-      <li>Max: ${tempMax}</li>
-    </ul>
+  <div class="max-w-lg rounded overflow-hidden shadow-lg">
+  <div class="px-6 py-4 text-center  bg-blue-200">
+    <div class="font-bold text-xl mb-2 text-center">${name}</div>
+    <div class="flex mb-4 justify-center align-middle">
+      <div class="bg-gray-200 mr-6 rounded">
+        <p class="border-b-2">Temperature: </p>
+        <p class="border-b-2">Feels Like: </p>
+        <p class="border-b-2">Min Temperature: </p>
+        <p">Max Temperature: </p>
+      </div>
+      <div class="">
+        <p>${temp}</p>
+        <p>${feelsLike}</p>
+        <p>${tempMin}</p>
+        <p>${tempMax}</p>
+      </div>
   </div>
-  <div class="px-6 py-4">
-    <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">Humidity: ${humidity}</span>
+  <div class="px-6 py-4 mx-auto">
+    <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">Humidity: ${humidity}&#37</span>
     <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">Lon: ${lon}</span>
     <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700">Lat: ${lat}</span>
   </div>
