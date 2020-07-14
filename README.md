@@ -39,3 +39,37 @@ In this project I'm using webpack and API to retrieve the requested data. For st
 - Open Weather API
 - Geolocation API
 
+[Live Version - Githack]('https://rawcdn.githack.com/mariosknl/weather_app_javascript/0636868ea89002800ae9788bf1ca4cf2a9308c7a/dist/index.html')
+
+### SETUP
+- git clone `git@github.com:mariosknl/weather_app_javascript.git`
+- `npm start` in the terminal to test it locally.
+- `npm run build` will create the updated version. Check `dist/index.html` in the broswer to see it in production mode. 
+
+### AUTHORS
+
+👤 Marios Kanellopoulos
+- Github: [@mariosknl](https://github.com/mariosknl)
+- Twitter: [@mariosknl](https://twitter.com/MariosKnl)
+- Linkedln: [marios-kanellopoulos](https://www.linkedin.com/in/marios-kanellopoulos)
+- Portfolio: [marios-kanellopoulos](https://marioskanellopoulos.com/)
+
+### Acknowledgments
+- [Microverse](https://www.microverse.org/)
+- [The Odin Project](https://www.theodinproject.com/courses/javascript/lessons/weather-app)
+- [Open Weather API](https://openweathermap.org/api)
+- [Freecodecamp Youtube webpack video tutorial](https://www.youtube.com/watch?v=MpGLUVbqoYQ&t=5304s)
+- [Expedito Inácio de Andrade Neto](https://expjazz.github.io/expedito_andrade/)
+- [Unsplash.com](https://unsplash.com/) - Images
+- [Tailwind CSS](https://tailwindcss.com/)
+
+
+### 🤝 Contributing
+Contributions, issues, and feature requests are welcome!
+Feel free to check the issues page.
+
+### Show your support
+Give a ⭐️ if you like this project!
+
+### 📝 License
+This project is MIT licensed
