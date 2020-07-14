@@ -2,12 +2,11 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
-
-
 .bgImgProperties {
   background-size: 100%;
   background-position: 100%;
   background-repeat: no-repeat;
+  transition: all 0.8s linear;
 }
 
 .mainBg {
@@ -31,7 +30,7 @@
 }
 
 .sunBg {
-  background-image: url('./assets/sun.jpg');;
+  background-image: url('./assets/sun.jpg');
 }
 
 .clearBg {

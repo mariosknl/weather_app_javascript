@@ -1,10 +1,12 @@
 import weatherApi from '../utilities/weatherApi';
 import farCelObj from './farCelObj';
 import populateForm from '../utilities/populateDom';
-
+import elements from '../utilities/elements';
 
 const geolocation = async (key = '8f42a5917bc9ff902a037047b57324f4') => {
   navigator.geolocation.getCurrentPosition(async (data) => {
+    const { loading } = elements.el();
+    loading.classList.remove('opacity-0');
     const temp = farCelObj.temp.celsius;
     const metric = temp === true ? 'metric' : 'imperial';
     const information = await weatherApi.getGeo(data.coords.latitude,
@@ -22,6 +24,7 @@ const geolocation = async (key = '8f42a5917bc9ff902a037047b57324f4') => {
       information.coord.lon,
       information.coord.lat,
     );
+    loading.classList.add('opacity-0');
   });
 };
 
