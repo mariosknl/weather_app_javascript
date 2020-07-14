@@ -1,11 +1,9 @@
 import elements from './utilities/elements';
 import inputValue from './utilities/eventListeners';
 import toggleTemp from './components/toggleTemp';
-import geolocation from './components/geolocator';
 
 const generate = () => {
   const { mainContainer, bodyHtml } = elements.el();
-  const { geolocator } = geolocator.geolocation();
   bodyHtml.classList = 'h-full mainBg bgImgProperties';
   mainContainer.innerHTML = `
   <div class="mx-auto pt-16 w-full max-w-xs mb-12">

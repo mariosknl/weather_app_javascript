@@ -5,7 +5,7 @@ const getWeather = async (city, unit = 'metric') => {
 };
 
 const getGeo = async (lat, lon, key, unit = 'metric') => {
-  const result = await fetch('https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=${unit}&appid=${key}');
+  const result = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=${unit}&appid=${key}`);
   const data = await result.json();
   return data;
 };

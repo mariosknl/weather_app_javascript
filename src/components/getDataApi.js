@@ -1,3 +1,4 @@
+/* eslint-disable no-alert */
 import weatherApi from '../utilities/weatherApi';
 import populateForm from '../utilities/populateDom';
 import farCel from './farCelObj';
