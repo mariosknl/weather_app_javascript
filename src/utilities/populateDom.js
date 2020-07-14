@@ -18,10 +18,10 @@ const populateInfo = (name, temp, feelsLike, tempMin, tempMax, humidity, lon, la
         <p">Max Temperature: </p>
       </div>
       <div>
-        <p>${temp}</p>
-        <p>${feelsLike}</p>
-        <p>${tempMin}</p>
-        <p>${tempMax}</p>
+        <p>${temp}&deg</p>
+        <p>${feelsLike}&deg</p>
+        <p>${tempMin}&deg</p>
+        <p>${tempMax}&deg</p>
       </div>
   </div>
   <div class="px-6 py-4 mx-auto">
