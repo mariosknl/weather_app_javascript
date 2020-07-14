@@ -7,7 +7,7 @@ const fillFields = async (city) => {
   const information = await weatherApi.getWeather(city, metric);
   populateForm.populateInfo(
     information.name,
-    information.weather[0].description,
+    information.weather[0].main,
     information.main.temp,
     information.main.feels_like,
     information.main.temp_min,

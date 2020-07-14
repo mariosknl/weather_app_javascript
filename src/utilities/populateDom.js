@@ -1,4 +1,5 @@
 import elements from './elements';
+import setBg from '../components/bgImg';
 
 
 const populateInfo = (name, weather, temp, feelsLike, tempMin, tempMax, humidity, lon, lat) => {
@@ -8,7 +9,7 @@ const populateInfo = (name, weather, temp, feelsLike, tempMin, tempMax, humidity
   cityDetails.classList = 'flex justify-center align-middle';
   cityDetails.innerHTML = `
   <div class="max-w-lg rounded overflow-hidden shadow-lg">
-  <div class="px-6 py-4 text-center  bg-blue-200" id="cityInfo">
+  <div class="px-6 py-4 text-center bg-gray-100 bg-opacity-25" id="cityInfo">
     <div class="font-bold text-xl mb-2 text-center">${name}</div>
     <div class="flex mb-4 justify-center align-middle">
       <div class="bg-gray-200 mr-6 rounded">
@@ -33,8 +34,8 @@ const populateInfo = (name, weather, temp, feelsLike, tempMin, tempMax, humidity
   </div>
 </div>
   `;
-
   mainContainer.appendChild(cityDetails);
+  setBg.setBg(weather);
 };
 
 export default { populateInfo };

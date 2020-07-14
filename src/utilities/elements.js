@@ -5,6 +5,8 @@ const el = () => ({
   celcBtn: document.getElementById('celcius-btn'),
   fahrBtn: document.getElementById('fahr-btn'),
   cityInfo: document.getElementById('cityInfo'),
+  bodyHtml: document.getElementById('bodyHtml'),
+  loading: document.querySelector('.loading'),
 });
 
 export default { el };
