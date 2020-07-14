@@ -2,13 +2,13 @@ import elements from './elements';
 
 
 const populateInfo = (name, temp, feelsLike, tempMin, tempMax, humidity, lon, lat) => {
-  const { mainContainer } = elements.el();
+  const { mainContainer, cityInfo } = elements.el();
 
-  const cityDetails = document.createElement('div');
+  const cityDetails = cityInfo || document.createElement('div');
   cityDetails.classList = 'flex justify-center align-middle';
   cityDetails.innerHTML = `
   <div class="max-w-lg rounded overflow-hidden shadow-lg">
-  <div class="px-6 py-4 text-center  bg-blue-200">
+  <div class="px-6 py-4 text-center  bg-blue-200" id="cityInfo">
     <div class="font-bold text-xl mb-2 text-center">${name}</div>
     <div class="flex mb-4 justify-center align-middle">
       <div class="bg-gray-200 mr-6 rounded">
@@ -17,7 +17,7 @@ const populateInfo = (name, temp, feelsLike, tempMin, tempMax, humidity, lon, la
         <p class="border-b-2">Min Temperature: </p>
         <p">Max Temperature: </p>
       </div>
-      <div class="">
+      <div>
         <p>${temp}</p>
         <p>${feelsLike}</p>
         <p>${tempMin}</p>

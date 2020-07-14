@@ -4,6 +4,7 @@ const el = () => ({
   searchForm: document.getElementById('searchForm'),
   celcBtn: document.getElementById('celcius-btn'),
   fahrBtn: document.getElementById('fahr-btn'),
+  cityInfo: document.getElementById('cityInfo'),
 });
 
 export default { el };
