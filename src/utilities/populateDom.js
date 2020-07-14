@@ -1,7 +1,7 @@
 import elements from './elements';
 
 
-const populateInfo = (name, temp, feelsLike, tempMin, tempMax, humidity, lon, lat) => {
+const populateInfo = (name, weather, temp, feelsLike, tempMin, tempMax, humidity, lon, lat) => {
   const { mainContainer, cityInfo } = elements.el();
 
   const cityDetails = cityInfo || document.createElement('div');
@@ -12,12 +12,14 @@ const populateInfo = (name, temp, feelsLike, tempMin, tempMax, humidity, lon, la
     <div class="font-bold text-xl mb-2 text-center">${name}</div>
     <div class="flex mb-4 justify-center align-middle">
       <div class="bg-gray-200 mr-6 rounded">
+        <p class="border-b-2">Weather: </p>
         <p class="border-b-2">Temperature: </p>
         <p class="border-b-2">Feels Like: </p>
         <p class="border-b-2">Min Temperature: </p>
         <p">Max Temperature: </p>
       </div>
       <div>
+        <p>${weather}</p>
         <p>${temp}&deg</p>
         <p>${feelsLike}&deg</p>
         <p>${tempMin}&deg</p>
