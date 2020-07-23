@@ -1,0 +1,38 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+.bgImgProperties {
+  background-size: 100%;
+  background-position: 100%;
+  background-repeat: no-repeat;
+  transition: all 0.8s linear;
+}
+
+.mainBg {
+  background-image: url('./assets/main.jpg');
+}
+
+.cloudyBg {
+  background-image: url('./assets/cloudy.jpg');
+}
+
+.rainyBg {
+  background-image: url('./assets/rainy.jpg');
+}
+
+.stormBg {
+  background-image: url('./assets/storm.jpg');
+}
+
+.snowBg {
+  background-image: url('./assets/snow.jpg');
+}
+
+.sunBg {
+  background-image: url('./assets/sun.jpg');
+}
+
+.clearBg {
+  background-image: url('./assets/sunny.jpg');
+}
