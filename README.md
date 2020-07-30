@@ -39,7 +39,7 @@ In this project I'm using webpack and API to retrieve the requested data. For st
 - Open Weather API
 - Geolocation API
 
-[Live Version - Githack]('https://rawcdn.githack.com/mariosknl/weather_app_javascript/0636868ea89002800ae9788bf1ca4cf2a9308c7a/dist/index.html')
+[Live Version - Githack](https://rawcdn.githack.com/mariosknl/weather_app_javascript/0636868ea89002800ae9788bf1ca4cf2a9308c7a/dist/index.html)
 
 ### SETUP
 - git clone `git@github.com:mariosknl/weather_app_javascript.git`
