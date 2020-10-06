@@ -21,7 +21,6 @@
   "homepage": "https://github.com/mariosknl/weather_app_javascript#readme",
   "devDependencies": {
     "eslint-config-airbnb-base": "14.1.0",
-    "eslint-plugin-import": "2.20.2",
     "stylelint-config-standard": "20.0.0",
     "stylelint-csstree-validator": "1.8.0",
     "url-loader": "4.1.0",
